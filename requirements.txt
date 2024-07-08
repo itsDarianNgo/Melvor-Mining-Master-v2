@@ -1,0 +1,6 @@
+asyncio
+websockets
+selenium
+transitions
+pytest
+line_profiler
