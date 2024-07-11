@@ -17,6 +17,12 @@ def select_character(browser, character_name):
         EC.element_to_be_clickable((By.XPATH, f"//h5[contains(text(), '{character_name}')]")))
     character_button.click()
 
+    # Click on the currently active mod profile button
+    active_mod_profile_button = WebDriverWait(browser, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="swal2-html-container"]/div/div/div/div[2]/a'))
+    )
+    active_mod_profile_button.click()
+
     # Confirm character selection
     confirm_button = WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "button.swal2-confirm.btn.btn-primary.m-1")))
